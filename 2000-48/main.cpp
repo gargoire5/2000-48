@@ -186,15 +186,26 @@ int main() {
     while (true) {
         game.PrintGrid();
         char move;
-        std::cout << "Entrez une direction (z, q, s, d) ou 'q' pour quitter : ";
+        std::cout << "Entrez une direction (z, q, s, d) ou 'a' pour quitter : ";
         std::cin >> move;
 
-        if (move == 'a') {
-            // L'utilisateur peut appuyer sur 'q' pour quitter le jeu
-            break;
-        }
 
-        game.Move(move);
+        if (move != 'z' && move != 'd' && move != 's' && move != 'q' && move != 'a')
+        {
+            std::cout << "erreur , mauvaise touche" << std::endl;
+            std::cout << "oui";
+        }
+        else
+        {
+            if (move == 'a')
+            {
+                // L'utilisateur peut appuyer sur 'q' pour quitter le jeu
+                break;
+            }
+            game.Move(move);
+        }
+        
+          
 
         if (game.IsGameOver()) {
             std::cout << "Game Over!" << std::endl;
