@@ -1,13 +1,11 @@
-#include <iostream>
+
 #include <vector>
-#include <cstdlib>
-#include <ctime>
-#include <conio.h>
-#include "A.h"
 
 class Game2048 {
 public:
     
+    Game2048();
+
     void PrintGrid();
 
     void Move(char direction);

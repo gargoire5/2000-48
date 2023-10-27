@@ -5,12 +5,12 @@
 #include <conio.h>
 #include "A.h"
 
-Game2048::Game2048{
-    Game2048() : score(0) {
-        grid = std::vector<std::vector<int>>(4, std::vector<int>(4, 0));
-        Game2048::AddRandomTile();
-        Game2048::AddRandomTile();
-    }
+Game2048::Game2048()
+{
+    score = 0;
+    grid = std::vector<std::vector<int>>(4, std::vector<int>(4, 0));
+    Game2048::AddRandomTile();
+    Game2048::AddRandomTile();
 }
     void Game2048::PrintGrid() {
         system("cls");  // actualise l'ecran
