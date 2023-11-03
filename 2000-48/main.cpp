@@ -5,7 +5,6 @@
 #include <conio.h>
 #include "A.h"
 
-
 int main() {
     Game2048 game;
 
